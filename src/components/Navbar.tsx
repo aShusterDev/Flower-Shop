@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
 
@@ -12,13 +13,23 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex flex-col items-start">
-            <span className="text-2xl font-light tracking-[0.2em] text-stone-800 uppercase">
-              Calgary Blooms
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-stone-400 uppercase">
-              by Nadya
-            </span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.jpg"
+              alt="Calgary Blooms"
+              width={50}
+              height={50}
+              className="rounded-full"
+              priority
+            />
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-light tracking-[0.15em] text-stone-800 uppercase leading-tight">
+                Calgary Blooms
+              </span>
+              <span className="text-[10px] tracking-[0.3em] text-stone-400 uppercase">
+                by Nadya
+              </span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-10">

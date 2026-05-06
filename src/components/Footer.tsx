@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,9 +7,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-lg font-light tracking-[0.15em] text-stone-800 uppercase mb-4">
-              Calgary Blooms
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo.jpg"
+                alt="Calgary Blooms"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <h3 className="text-lg font-light tracking-[0.15em] text-stone-800 uppercase">
+                Calgary Blooms
+              </h3>
+            </div>
             <p className="text-sm text-stone-500 leading-relaxed">
               Handcrafted floral arrangements made with love by Nadya.
               Serving Calgary and surrounding areas with fresh, beautiful
