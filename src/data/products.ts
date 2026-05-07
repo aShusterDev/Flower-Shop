@@ -1,3 +1,5 @@
+import { img } from "@/lib/basePath";
+
 export type Product = {
   id: number;
   slug: string;
@@ -29,7 +31,7 @@ export const products: Product[] = [
     price: 85,
     description: "A passionate arrangement of deep red roses, orange alstroemeria, green cymbidium orchids, and white chrysanthemums in a decorative patterned container.",
     details: "This stunning arrangement features premium red roses paired with exotic green cymbidium orchids and delicate white chrysanthemums. Perfect for anniversaries, romantic gestures, or adding warmth to any space.",
-    image: "/products/ruby-romance.jpg",
+    image: img("/products/ruby-romance.jpg"),
     category: "signature",
     featured: true,
   },
@@ -40,7 +42,7 @@ export const products: Product[] = [
     price: 75,
     description: "Warm coral and deep red roses complemented by a vibrant green cymbidium orchid, hypericum berries, and lush fern greenery.",
     details: "A rich, warm-toned arrangement that captures the beauty of a sunset. Features garden roses in coral and crimson shades, accented with an exotic orchid bloom and textural greenery.",
-    image: "/products/coral-sunset.jpg",
+    image: img("/products/coral-sunset.jpg"),
     category: "signature",
     featured: true,
   },
@@ -51,7 +53,7 @@ export const products: Product[] = [
     price: 85,
     description: "An elegant all-white arrangement of hydrangeas, lilies, tulips, roses, and lisianthus in a classic white ribbed vase.",
     details: "Timeless and graceful, this all-white arrangement speaks volumes with its purity and elegance. Ideal for sympathy, new beginnings, or sophisticated home décor.",
-    image: "/products/pure-grace.jpg",
+    image: img("/products/pure-grace.jpg"),
     category: "sympathy",
     featured: true,
   },
@@ -62,7 +64,7 @@ export const products: Product[] = [
     price: 75,
     description: "A warm autumnal arrangement featuring dusty rose blooms, white lilies, yellow button mums, and pampas grass in a copper-toned container.",
     details: "Celebrate the beauty of autumn with this warm, textural arrangement. Dried and fresh elements combine for a modern take on fall florals.",
-    image: "/products/autumn-glow.jpg",
+    image: img("/products/autumn-glow.jpg"),
     category: "seasonal",
   },
   {
@@ -72,7 +74,7 @@ export const products: Product[] = [
     price: 65,
     description: "A cheerful wicker basket overflowing with pink gerbera daisies, purple statice, magenta carnations, and lush green hydrangeas.",
     details: "Brighten any room with this vibrant spring basket arrangement. A delightful mix of colorful blooms that brings the joy of a spring garden indoors.",
-    image: "/products/spring-basket.jpg",
+    image: img("/products/spring-basket.jpg"),
     category: "seasonal",
   },
   {
@@ -82,7 +84,7 @@ export const products: Product[] = [
     price: 75,
     description: "A serene arrangement of large white gerbera daisies, white lilies, baby's breath, and lush tropical greenery.",
     details: "Clean, modern, and striking. These oversized white gerberas create a bold yet peaceful statement, perfect for sympathy arrangements or minimalist décor.",
-    image: "/products/white-gerbera-garden.jpg",
+    image: img("/products/white-gerbera-garden.jpg"),
     category: "sympathy",
   },
   {
@@ -92,7 +94,7 @@ export const products: Product[] = [
     price: 120,
     description: "Two lush round arrangements of red and pink roses with delicate fern fronds, perfect as a matching pair for events or gifting.",
     details: "A stunning pair of rose arrangements viewed from above, showcasing the beauty of classic red and soft pink roses. Perfect for weddings, ceremonies, or as a grand gift.",
-    image: "/products/rose-ceremony-duo.jpg",
+    image: img("/products/rose-ceremony-duo.jpg"),
     category: "wedding",
     bestseller: true,
   },
@@ -103,7 +105,7 @@ export const products: Product[] = [
     price: 70,
     description: "A dreamy combination of peach dahlias, blush roses, pink carnations, and delicate sweet william in soft pastel tones.",
     details: "This romantic, garden-inspired arrangement blends soft peach and pink tones for an effortlessly beautiful display. A wonderful gift for birthdays, Mother's Day, or just because.",
-    image: "/products/peach-pink-posy.jpg",
+    image: img("/products/peach-pink-posy.jpg"),
     category: "bouquets",
     bestseller: true,
   },
@@ -114,7 +116,7 @@ export const products: Product[] = [
     price: 80,
     description: "An elegant elongated arrangement of white roses, astrantia, and graceful curving bear grass in a low, modern style.",
     details: "Sophisticated and serene, this low-profile arrangement features pristine white roses and delicate star-shaped astrantia. Perfect as a table centerpiece.",
-    image: "/products/white-serenity.jpg",
+    image: img("/products/white-serenity.jpg"),
     category: "signature",
   },
   {
@@ -124,7 +126,7 @@ export const products: Product[] = [
     price: 90,
     description: "A luxurious arrangement of white roses, spider mums, carnations, and rich burgundy astilbe in a gold-rimmed white ceramic pot.",
     details: "This premium arrangement pairs classic white blooms with dramatic burgundy accents for a sophisticated, high-end look. Perfect for elegant celebrations.",
-    image: "/products/ivory-burgundy.jpg",
+    image: img("/products/ivory-burgundy.jpg"),
     category: "signature",
     featured: true,
   },
@@ -135,7 +137,7 @@ export const products: Product[] = [
     price: 65,
     description: "A matching pair of pink arrangements featuring roses, gerbera daisies, carnations, and green hydrangea in frosted glass cubes.",
     details: "Sweet and charming, these twin arrangements bring a pop of pink to any setting. Features roses, gerbera daisies, and lush hydrangea.",
-    image: "/products/pretty-in-pink.jpg",
+    image: img("/products/pretty-in-pink.jpg"),
     category: "everyday",
   },
   {
@@ -145,7 +147,7 @@ export const products: Product[] = [
     price: 80,
     description: "A festive autumn arrangement of peach dahlias, burgundy mums, and yellow blooms nestled in a charming pumpkin-shaped container.",
     details: "Celebrate fall in style with this whimsical pumpkin arrangement. Warm tones of peach, burgundy, and gold create the perfect seasonal centerpiece.",
-    image: "/products/harvest-pumpkin.jpg",
+    image: img("/products/harvest-pumpkin.jpg"),
     category: "seasonal",
   },
   {
@@ -155,7 +157,7 @@ export const products: Product[] = [
     price: 70,
     description: "An artistic arrangement of white gerbera daisies with eucalyptus, baby's breath, and a distinctive dried banksia pod accent.",
     details: "Modern and architectural, this arrangement combines the softness of white gerberas with the unique texture of eucalyptus and dried elements.",
-    image: "/products/peaceful-bloom.jpg",
+    image: img("/products/peaceful-bloom.jpg"),
     category: "sympathy",
   },
   {
@@ -165,7 +167,7 @@ export const products: Product[] = [
     price: 85,
     description: "A timeless hand-tied bridal bouquet of pristine white roses and clouds of delicate baby's breath, wrapped in satin ribbon.",
     details: "The quintessential bridal bouquet. Pure white roses surrounded by ethereal baby's breath, hand-tied and wrapped in elegant satin. A timeless choice for your special day.",
-    image: "/products/classic-bridal.jpg",
+    image: img("/products/classic-bridal.jpg"),
     category: "wedding",
     bestseller: true,
   },
@@ -176,7 +178,7 @@ export const products: Product[] = [
     price: 95,
     description: "A magnificent tall arrangement of green hydrangea, purple statice, peach roses, and eucalyptus in a silver pedestal vase.",
     details: "Make a grand statement with this towering arrangement. A luxurious mix of hydrangea, roses, and textural accents in an elegant silver vase.",
-    image: "/products/grand-garden-vase.jpg",
+    image: img("/products/grand-garden-vase.jpg"),
     category: "signature",
   },
   {
@@ -186,7 +188,7 @@ export const products: Product[] = [
     price: 60,
     description: "Delicate pink and magenta ranunculus blooms with green hypericum berries and fern fronds in a golden pot.",
     details: "The layered petals of ranunculus are truly captivating. This arrangement showcases these beloved spring flowers in romantic shades of pink and magenta.",
-    image: "/products/ranunculus-blush.jpg",
+    image: img("/products/ranunculus-blush.jpg"),
     category: "everyday",
   },
   {
@@ -196,7 +198,7 @@ export const products: Product[] = [
     price: 85,
     description: "A lavish autumn centerpiece in a copper pumpkin featuring roses, lilies, chrysanthemums, autumn leaves, ornamental corn, and billy balls.",
     details: "Go all out for Thanksgiving with this show-stopping centerpiece. A copper pumpkin overflows with harvest-inspired blooms and seasonal accents.",
-    image: "/products/thanksgiving-centerpiece.jpg",
+    image: img("/products/thanksgiving-centerpiece.jpg"),
     category: "seasonal",
   },
   {
@@ -206,7 +208,7 @@ export const products: Product[] = [
     price: 65,
     description: "A gorgeous hand-held bouquet of pink and blush roses with eucalyptus and spider flower accents, wrapped in elegant paper.",
     details: "Soft, romantic, and beautifully presented. This hand-tied bouquet of blush roses is perfect for birthdays, celebrations, or as an everyday luxury.",
-    image: "/products/blush-rose-bouquet.jpg",
+    image: img("/products/blush-rose-bouquet.jpg"),
     category: "bouquets",
     featured: true,
   },
@@ -217,7 +219,7 @@ export const products: Product[] = [
     price: 90,
     description: "A festive holiday centerpiece with red roses, ornaments, pine branches, cotton bolls, cinnamon sticks, and a charming ceramic cottage.",
     details: "Bring the magic of Christmas to your table with this enchanting centerpiece. A ceramic cottage nestled among pine, roses, and holiday ornaments.",
-    image: "/products/christmas-cottage.jpg",
+    image: img("/products/christmas-cottage.jpg"),
     category: "seasonal",
   },
   {
@@ -227,7 +229,7 @@ export const products: Product[] = [
     price: 95,
     description: "White hydrangeas, roses, veronica, and snowberries arranged in a striking ceramic face vase with red lips.",
     details: "Art meets floristry in this unique arrangement. Lush white blooms crown an artistic ceramic face vase, creating a conversation piece and beautiful décor statement.",
-    image: "/products/lady-face-vase.jpg",
+    image: img("/products/lady-face-vase.jpg"),
     category: "signature",
     bestseller: true,
   },
@@ -238,7 +240,7 @@ export const products: Product[] = [
     price: 65,
     description: "A vibrant mix of orange roses, coral gerbera daisy, green carnations, and tulips in a sleek black glass cube.",
     details: "Energetic and cheerful, this arrangement bursts with warm citrus tones. Perfect for brightening someone's day or adding a pop of color to any room.",
-    image: "/products/citrus-burst.jpg",
+    image: img("/products/citrus-burst.jpg"),
     category: "everyday",
   },
   {
@@ -248,7 +250,7 @@ export const products: Product[] = [
     price: 65,
     description: "Soft pink anemones, ranunculus, peach alstroemeria, roses, and purple statice in a vintage floral-patterned container.",
     details: "A romantic, cottage-garden inspired arrangement featuring the beloved anemone flower alongside soft ranunculus and roses in dreamy pink tones.",
-    image: "/products/spring-anemone.jpg",
+    image: img("/products/spring-anemone.jpg"),
     category: "everyday",
   },
   {
@@ -258,7 +260,7 @@ export const products: Product[] = [
     price: 85,
     description: "A dome of pink, cream, and mauve roses arranged in a blush hat box adorned with golden butterfly accents.",
     details: "Luxurious and whimsical, this hat box arrangement features dozens of roses in soft tones, accented with delicate golden butterflies. An unforgettable gift.",
-    image: "/products/butterfly-rose-box.jpg",
+    image: img("/products/butterfly-rose-box.jpg"),
     category: "everyday",
     bestseller: true,
   },
@@ -269,7 +271,7 @@ export const products: Product[] = [
     price: 95,
     description: "A premium arrangement of white lilies, spider mums, green cymbidium orchids, and burgundy astilbe in a white ceramic pot.",
     details: "Exotic green orchids take center stage in this luxurious arrangement, paired with elegant white lilies and dramatic burgundy accents.",
-    image: "/products/green-orchid-luxe.jpg",
+    image: img("/products/green-orchid-luxe.jpg"),
     category: "signature",
   },
   {
@@ -279,7 +281,7 @@ export const products: Product[] = [
     price: 75,
     description: "White roses, gerbera daisies, and baby's breath with elegant greenery in a natural woven basket.",
     details: "A peaceful, all-white arrangement in a natural basket. The combination of roses, gerberas, and baby's breath creates a serene tribute or gift.",
-    image: "/products/white-serenity-basket.jpg",
+    image: img("/products/white-serenity-basket.jpg"),
     category: "sympathy",
   },
   {
@@ -289,7 +291,7 @@ export const products: Product[] = [
     price: 90,
     description: "A dramatic arrangement of burgundy cymbidium orchids, red roses, tulips, alstroemeria, and eucalyptus in a textured red vase.",
     details: "Bold and exotic, this arrangement features stunning burgundy orchids alongside vibrant roses and tulips. A statement piece for those who love rich, dramatic colors.",
-    image: "/products/exotic-orchid-vase.jpg",
+    image: img("/products/exotic-orchid-vase.jpg"),
     category: "signature",
   },
   {
@@ -299,7 +301,7 @@ export const products: Product[] = [
     price: 60,
     description: "A classic dome of white roses interwoven with clouds of baby's breath, viewed from above to showcase the perfect symmetry.",
     details: "Simple yet stunning. This classic combination of white roses and baby's breath creates a timeless arrangement suitable for any occasion.",
-    image: "/products/angels-breath.jpg",
+    image: img("/products/angels-breath.jpg"),
     category: "sympathy",
   },
   {
@@ -309,7 +311,7 @@ export const products: Product[] = [
     price: 45,
     description: "An elegant matching set of a wrist corsage and boutonniere featuring white roses, baby's breath, and blue satin ribbon.",
     details: "Complete your formal look with this beautiful matching set. White roses and baby's breath are accented with flowing blue satin ribbon. Perfect for prom, weddings, or formal events.",
-    image: "/products/corsage-boutonniere.jpg",
+    image: img("/products/corsage-boutonniere.jpg"),
     category: "wedding",
   },
   {
@@ -319,7 +321,7 @@ export const products: Product[] = [
     price: 70,
     description: "A refreshing arrangement of white roses, blue roses, blue hydrangea, white daisies, green orchid, and veronica in a dark cube vase.",
     details: "Cool and calming, this unique arrangement features rare blue roses alongside crisp white blooms and hydrangea. A refreshing choice for any occasion.",
-    image: "/products/blue-horizon.jpg",
+    image: img("/products/blue-horizon.jpg"),
     category: "everyday",
   },
   {
@@ -329,7 +331,7 @@ export const products: Product[] = [
     price: 120,
     description: "A matching pair of pink cymbidium orchid arrangements with roses, carnations, and green trick dianthus in mauve ceramic vases.",
     details: "These stunning twin arrangements feature exotic cymbidium orchids in soft mauve tones. A luxurious pair perfect for flanking an entryway or mantlepiece.",
-    image: "/products/orchid-twins.jpg",
+    image: img("/products/orchid-twins.jpg"),
     category: "signature",
   },
   {
@@ -339,7 +341,7 @@ export const products: Product[] = [
     price: 70,
     description: "A free-spirited bouquet of orange ranunculus, blue nigella, purple clematis, white roses, and eucalyptus held in hand.",
     details: "Inspired by a wildflower meadow, this loose, natural bouquet features a stunning mix of seasonal blooms in vibrant oranges, blues, and purples.",
-    image: "/products/wildflower-garden.jpg",
+    image: img("/products/wildflower-garden.jpg"),
     category: "bouquets",
   },
   {
@@ -349,7 +351,7 @@ export const products: Product[] = [
     price: 65,
     description: "Five pristine white roses artfully arranged with eucalyptus branches and decorative twigs in a patterned ceramic vase.",
     details: "Less is more with this elegant, minimalist arrangement. Five perfect white roses are styled with architectural greenery for a refined, modern look.",
-    image: "/products/elegant-white-roses.jpg",
+    image: img("/products/elegant-white-roses.jpg"),
     category: "sympathy",
   },
   {
@@ -359,7 +361,7 @@ export const products: Product[] = [
     price: 75,
     description: "A luxurious wrapped bouquet of pink dahlias, roses, sweet william, and fern in delicate pink tissue.",
     details: "Dreamy and romantic, this wrapped bouquet showcases gorgeous dahlias alongside soft pink roses and textural sweet william. A beautiful gift that arrives ready to impress.",
-    image: "/products/dahlia-dream.jpg",
+    image: img("/products/dahlia-dream.jpg"),
     category: "bouquets",
   },
   {
@@ -369,7 +371,7 @@ export const products: Product[] = [
     price: 85,
     description: "Soft pink cymbidium orchids paired with white hydrangea, roses, anemones, and green dianthus in a blush pink pot.",
     details: "Delicate pink orchids float above a cloud of white hydrangea and roses in this dreamy, feminine arrangement. A sophisticated choice for special occasions.",
-    image: "/products/orchid-elegance.jpg",
+    image: img("/products/orchid-elegance.jpg"),
     category: "signature",
   },
   {
@@ -379,7 +381,7 @@ export const products: Product[] = [
     price: 70,
     description: "A cheerful wooden box overflowing with white gerbera daisies, chrysanthemums, and cascading greenery.",
     details: "Fresh and cheerful, this rustic wooden box arrangement is filled with an abundance of white daisies and mums. A lovely choice for sympathy or everyday brightening.",
-    image: "/products/daisy-garden-box.jpg",
+    image: img("/products/daisy-garden-box.jpg"),
     category: "sympathy",
   },
   {
@@ -389,7 +391,7 @@ export const products: Product[] = [
     price: 70,
     description: "A lively mix of hot pink gerbera daisies, purple lisianthus, lavender roses, and yellow-green orchid in a white textured vase.",
     details: "Bold and beautiful, this arrangement is bursting with color and personality. A fantastic way to celebrate a birthday, achievement, or simply brighten someone's week.",
-    image: "/products/vibrant-garden.jpg",
+    image: img("/products/vibrant-garden.jpg"),
     category: "everyday",
   },
   {
@@ -399,7 +401,7 @@ export const products: Product[] = [
     price: 55,
     description: "A soft arrangement of blush roses, lavender carnations, daisies, and thistle in a white textured pot.",
     details: "Gentle and calming, this pastel arrangement features soft pinks, lavenders, and whites. A lovely everyday arrangement that brings peace and beauty to any space.",
-    image: "/products/pastel-bliss.jpg",
+    image: img("/products/pastel-bliss.jpg"),
     category: "everyday",
   },
   {
@@ -409,7 +411,7 @@ export const products: Product[] = [
     price: 80,
     description: "Hot pink roses and pink oriental lilies with pussy willow branches arranged in a clear glass vase.",
     details: "A romantic pairing of fragrant stargazer lilies and deep pink roses, accented with natural pussy willow branches for a touch of the unexpected.",
-    image: "/products/rose-lily-romance.jpg",
+    image: img("/products/rose-lily-romance.jpg"),
     category: "bouquets",
   },
   {
@@ -419,7 +421,7 @@ export const products: Product[] = [
     price: 80,
     description: "A lush bouquet of roses in every shade — pink, peach, burgundy, lavender, and cream — with green hydrangea and rich foliage.",
     details: "Why choose one color when you can have them all? This abundant rose arrangement features every shade of the rainbow, creating a joyful and luxurious display.",
-    image: "/products/rainbow-rose-mix.jpg",
+    image: img("/products/rainbow-rose-mix.jpg"),
     category: "everyday",
     bestseller: true,
   },

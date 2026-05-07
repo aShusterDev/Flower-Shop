@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { img } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "About | Calgary Blooms",
@@ -15,7 +16,7 @@ export default function AboutPage() {
       <section className="relative h-[55vh] min-h-[400px] flex items-end">
         <div className="absolute inset-0">
           <Image
-            src="/products/orchid-twins.jpg"
+            src={img("/products/orchid-twins.jpg")}
             alt="Calgary Blooms arrangements"
             fill
             priority
@@ -39,7 +40,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative aspect-[4/5] bg-neutral-50 overflow-hidden">
               <Image
-                src="/products/spring-anemone.jpg"
+                src={img("/products/spring-anemone.jpg")}
                 alt="Floral arrangement by Nadya"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -118,7 +119,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/products/rose-ceremony-duo.jpg"
+            src={img("/products/rose-ceremony-duo.jpg")}
             alt="Rose arrangements"
             fill
             className="object-cover"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { img } from "@/lib/basePath";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-5">
               <div className="w-7 h-7 rounded-full overflow-hidden border border-neutral-200/50 flex-shrink-0">
                 <Image
-                  src="/logo.jpg"
+                  src={img("/logo.jpg")}
                   alt="Calgary Blooms"
                   width={28}
                   height={28}

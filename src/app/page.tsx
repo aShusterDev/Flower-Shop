@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedProducts, getBestsellers, categories } from "@/data/products";
 import ProductGrid from "@/components/ProductGrid";
+import { img } from "@/lib/basePath";
 
 const categoryImages: Record<string, string> = {
-  signature: "/products/orchid-elegance.jpg",
-  bouquets: "/products/dahlia-dream.jpg",
-  everyday: "/products/butterfly-rose-box.jpg",
-  sympathy: "/products/pure-grace.jpg",
-  seasonal: "/products/christmas-cottage.jpg",
-  wedding: "/products/classic-bridal.jpg",
+  signature: img("/products/orchid-elegance.jpg"),
+  bouquets: img("/products/dahlia-dream.jpg"),
+  everyday: img("/products/butterfly-rose-box.jpg"),
+  sympathy: img("/products/pure-grace.jpg"),
+  seasonal: img("/products/christmas-cottage.jpg"),
+  wedding: img("/products/classic-bridal.jpg"),
 };
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
       <section className="relative h-screen min-h-[700px] max-h-[1000px] flex items-end">
         <div className="absolute inset-0">
           <Image
-            src="/products/peach-pink-posy.jpg"
+            src={img("/products/peach-pink-posy.jpg")}
             alt="Fresh floral arrangement by Calgary Blooms"
             fill
             priority
@@ -58,7 +59,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/shop?category=signature" className="group relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/products/ivory-burgundy.jpg"
+                src={img("/products/ivory-burgundy.jpg")}
                 alt="Signature Arrangements"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -78,7 +79,7 @@ export default function Home() {
 
             <Link href="/shop?category=bouquets" className="group relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/products/wildflower-garden.jpg"
+                src={img("/products/wildflower-garden.jpg")}
                 alt="Fresh Bouquets"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -151,7 +152,7 @@ export default function Home() {
                   className="group relative aspect-[4/5] overflow-hidden"
                 >
                   <Image
-                    src={categoryImages[category.slug] || "/products/ruby-romance.jpg"}
+                    src={categoryImages[category.slug] || img("/products/ruby-romance.jpg")}
                     alt={category.name}
                     fill
                     sizes="(max-width: 768px) 50vw, 33vw"
@@ -197,7 +198,7 @@ export default function Home() {
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/products/wildflower-garden.jpg"
+            src={img("/products/wildflower-garden.jpg")}
             alt="Custom floral arrangements"
             fill
             className="object-cover"

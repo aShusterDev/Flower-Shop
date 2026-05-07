@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useCart } from "./CartProvider";
+import { img } from "@/lib/basePath";
 
 export default function Navbar() {
   const { totalItems } = useCart();
@@ -65,7 +66,7 @@ export default function Navbar() {
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
             <div className="w-7 h-7 rounded-full overflow-hidden border border-neutral-200/50 flex-shrink-0">
               <Image
-                src="/logo.jpg"
+                src={img("/logo.jpg")}
                 alt="Calgary Blooms"
                 width={28}
                 height={28}
