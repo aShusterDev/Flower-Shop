@@ -30,27 +30,29 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     .slice(0, 4);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-      <nav className="mb-8">
-        <ol className="flex items-center gap-2 text-xs text-stone-400">
+    <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-24 pb-8 lg:pt-28 lg:pb-14">
+      {/* Breadcrumb */}
+      <nav className="mb-10">
+        <ol className="flex items-center gap-2 text-[11px] text-neutral-300">
           <li>
-            <Link href="/" className="hover:text-stone-600 transition-colors">
+            <Link href="/" className="hover:text-neutral-600 transition-colors">
               Home
             </Link>
           </li>
-          <li>/</li>
+          <li className="text-neutral-200">/</li>
           <li>
-            <Link href="/shop" className="hover:text-stone-600 transition-colors">
+            <Link href="/shop" className="hover:text-neutral-600 transition-colors">
               Shop
             </Link>
           </li>
-          <li>/</li>
-          <li className="text-stone-600">{product.name}</li>
+          <li className="text-neutral-200">/</li>
+          <li className="text-neutral-500">{product.name}</li>
         </ol>
       </nav>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-        <div className="relative aspect-square bg-stone-100 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+        {/* Product image */}
+        <div className="relative aspect-square bg-neutral-50 overflow-hidden">
           <Image
             src={product.image}
             alt={product.name}
@@ -61,8 +63,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           />
         </div>
 
-        <div className="flex flex-col justify-center">
-          <p className="text-xs tracking-[0.2em] uppercase text-rose-400 mb-2">
+        {/* Product info */}
+        <div className="flex flex-col justify-center lg:py-8">
+          <p className="text-[10px] tracking-[0.25em] uppercase text-neutral-400 mb-3">
             {product.category === "signature"
               ? "Signature Arrangement"
               : product.category === "bouquets"
@@ -76,47 +79,52 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               : "Wedding & Events"}
           </p>
 
-          <h1 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-light text-neutral-800 tracking-tight">
             {product.name}
           </h1>
 
-          <p className="mt-4 text-2xl text-stone-700 font-light">
+          <p className="mt-4 text-xl text-neutral-800 font-light">
             ${product.price}.00
           </p>
 
-          <p className="mt-6 text-stone-500 leading-relaxed">
-            {product.description}
-          </p>
+          <div className="mt-8 border-t border-neutral-100 pt-8">
+            <p className="text-[13px] text-neutral-500 leading-[1.9]">
+              {product.description}
+            </p>
+          </div>
 
           <div className="mt-8">
             <AddToCartButton product={product} />
           </div>
 
-          <div className="mt-10 border-t border-stone-200 pt-8">
-            <h3 className="text-xs tracking-[0.2em] uppercase text-stone-700 mb-3">
-              Details
-            </h3>
-            <p className="text-sm text-stone-500 leading-relaxed">
-              {product.details}
-            </p>
-          </div>
+          <div className="mt-10 border-t border-neutral-100 pt-8 space-y-6">
+            <div>
+              <h3 className="text-[11px] tracking-[0.2em] uppercase text-neutral-800 mb-3">
+                Details
+              </h3>
+              <p className="text-[13px] text-neutral-400 leading-[1.9]">
+                {product.details}
+              </p>
+            </div>
 
-          <div className="mt-8 border-t border-stone-200 pt-8">
-            <h3 className="text-xs tracking-[0.2em] uppercase text-stone-700 mb-3">
-              Delivery
-            </h3>
-            <ul className="space-y-2 text-sm text-stone-500">
-              <li>Same-day delivery available for orders before 2pm</li>
-              <li>Free delivery on orders over $100</li>
-              <li>Serving Calgary and surrounding areas</li>
-            </ul>
+            <div>
+              <h3 className="text-[11px] tracking-[0.2em] uppercase text-neutral-800 mb-3">
+                Delivery
+              </h3>
+              <ul className="space-y-2 text-[13px] text-neutral-400">
+                <li>Same-day delivery for orders before 2pm</li>
+                <li>Free delivery on orders over $100</li>
+                <li>Serving Calgary and surrounding areas</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Related products */}
       {related.length > 0 && (
-        <section className="mt-24">
-          <h2 className="text-2xl font-light text-stone-800 tracking-tight mb-10 text-center">
+        <section className="mt-24 lg:mt-32 pt-10 border-t border-neutral-100">
+          <h2 className="text-xl font-light text-neutral-800 tracking-tight mb-10">
             You May Also Like
           </h2>
           <ProductGrid products={related} />

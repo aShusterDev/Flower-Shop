@@ -4,8 +4,8 @@ import { getFeaturedProducts, getBestsellers, categories } from "@/data/products
 import ProductGrid from "@/components/ProductGrid";
 
 const categoryImages: Record<string, string> = {
-  signature: "/products/lady-face-vase.jpg",
-  bouquets: "/products/blush-rose-bouquet.jpg",
+  signature: "/products/orchid-elegance.jpg",
+  bouquets: "/products/dahlia-dream.jpg",
   everyday: "/products/butterfly-rose-box.jpg",
   sympathy: "/products/pure-grace.jpg",
   seasonal: "/products/christmas-cottage.jpg",
@@ -18,83 +18,148 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center">
+      {/* Hero — full bleed, photography-forward */}
+      <section className="relative h-screen min-h-[700px] max-h-[1000px] flex items-end">
         <div className="absolute inset-0">
           <Image
             src="/products/peach-pink-posy.jpg"
-            alt="Beautiful floral arrangement"
+            alt="Fresh floral arrangement by Calgary Blooms"
             fill
             priority
             unoptimized
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-xl">
-            <p className="text-xs tracking-[0.4em] uppercase text-stone-500 mb-4">
-              Handcrafted with Love
-            </p>
-            <h1 className="text-5xl md:text-7xl font-light text-stone-800 leading-tight tracking-tight">
-              Calgary
-              <br />
-              <span className="italic font-normal">Blooms</span>
-            </h1>
-            <p className="mt-6 text-lg text-stone-600 font-light leading-relaxed max-w-md">
-              Fresh, artisan floral arrangements crafted by Nadya for
-              life&apos;s most beautiful moments.
-            </p>
-            <div className="mt-10 flex gap-4">
-              <Link
-                href="/shop"
-                className="px-8 py-3.5 bg-stone-800 text-white text-xs tracking-[0.2em] uppercase hover:bg-stone-700 transition-colors"
-              >
-                Shop Now
-              </Link>
-              <Link
-                href="/about"
-                className="px-8 py-3.5 border border-stone-400 text-stone-700 text-xs tracking-[0.2em] uppercase hover:border-stone-800 hover:text-stone-900 transition-colors"
-              >
-                Our Story
-              </Link>
-            </div>
+        <div className="relative w-full max-w-[1400px] mx-auto px-6 lg:px-10 pb-16 lg:pb-20">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-white/70 mb-4">
+            Handcrafted in Calgary
+          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-[1.1] tracking-tight max-w-2xl">
+            Fresh Flowers,
+            <br />
+            Crafted with Care
+          </h1>
+          <div className="mt-8 flex gap-4">
+            <Link
+              href="/shop"
+              className="px-8 py-3 bg-white text-neutral-900 text-[11px] tracking-[0.2em] uppercase hover:bg-neutral-100 transition-colors duration-200"
+            >
+              View Collection
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase text-rose-400 mb-3">
-              Collections
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
+      {/* Collection highlight — two large images side by side */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/shop?category=signature" className="group relative aspect-[3/4] overflow-hidden">
+              <Image
+                src="/products/ivory-burgundy.jpg"
+                alt="Signature Arrangements"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <p className="text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2">Collection</p>
+                <h2 className="text-xl md:text-2xl font-light text-white tracking-wide">
+                  Signature Arrangements
+                </h2>
+                <span className="inline-block mt-4 text-[11px] tracking-[0.15em] uppercase text-white/80 border-b border-white/40 pb-0.5">
+                  View Items
+                </span>
+              </div>
+            </Link>
+
+            <Link href="/shop?category=bouquets" className="group relative aspect-[3/4] overflow-hidden">
+              <Image
+                src="/products/wildflower-garden.jpg"
+                alt="Fresh Bouquets"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <p className="text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2">Collection</p>
+                <h2 className="text-xl md:text-2xl font-light text-white tracking-wide">
+                  Fresh Bouquets
+                </h2>
+                <span className="inline-block mt-4 text-[11px] tracking-[0.15em] uppercase text-white/80 border-b border-white/40 pb-0.5">
+                  View Items
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured products */}
+      <section className="pb-20 lg:pb-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 mb-2">
+                Curated Selection
+              </p>
+              <h2 className="text-2xl md:text-3xl font-light text-neutral-800 tracking-tight">
+                New Arrivals
+              </h2>
+            </div>
+            <Link
+              href="/shop"
+              className="text-[11px] tracking-[0.15em] uppercase text-neutral-400 hover:text-neutral-800 transition-colors duration-200 border-b border-neutral-200 pb-0.5 hidden md:block"
+            >
+              View All
+            </Link>
+          </div>
+
+          <ProductGrid products={featured} />
+
+          <div className="text-center mt-12 md:hidden">
+            <Link
+              href="/shop"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase text-neutral-400 hover:text-neutral-800 border-b border-neutral-200 pb-0.5"
+            >
+              View All Arrangements
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories grid */}
+      <section className="py-20 lg:py-28 bg-neutral-50">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="text-center mb-14">
+            <h2 className="text-2xl md:text-3xl font-light text-neutral-800 tracking-tight">
               Shop by Occasion
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {categories
               .filter((c) => c.slug !== "all")
               .map((category) => (
                 <Link
                   key={category.slug}
                   href={`/shop?category=${category.slug}`}
-                  className="group relative aspect-[4/5] overflow-hidden bg-stone-100"
+                  className="group relative aspect-[4/5] overflow-hidden"
                 >
                   <Image
                     src={categoryImages[category.slug] || "/products/ruby-romance.jpg"}
                     alt={category.name}
                     fill
                     sizes="(max-width: 768px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-end p-6">
-                    <h3 className="text-white text-sm md:text-base tracking-[0.15em] uppercase font-light">
+                  <div className="absolute inset-0 bg-black/25 group-hover:bg-black/35 transition-colors duration-500" />
+                  <div className="absolute inset-0 flex items-end p-5 md:p-7">
+                    <h3 className="text-white text-[12px] md:text-[13px] tracking-[0.15em] uppercase font-light">
                       {category.name}
                     </h3>
                   </div>
@@ -104,74 +169,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured */}
-      <section className="py-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase text-rose-400 mb-3">
-              Curated Selection
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
-              Featured Arrangements
-            </h2>
-          </div>
-
-          <ProductGrid products={featured} />
-
-          <div className="text-center mt-12">
+      {/* Bestsellers */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-neutral-400 mb-2">
+                Most Loved
+              </p>
+              <h2 className="text-2xl md:text-3xl font-light text-neutral-800 tracking-tight">
+                Bestsellers
+              </h2>
+            </div>
             <Link
               href="/shop"
-              className="inline-block px-10 py-3.5 border border-stone-300 text-stone-600 text-xs tracking-[0.2em] uppercase hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-all duration-300"
+              className="text-[11px] tracking-[0.15em] uppercase text-neutral-400 hover:text-neutral-800 transition-colors duration-200 border-b border-neutral-200 pb-0.5 hidden md:block"
             >
-              View All Arrangements
+              View All
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Bestsellers */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase text-rose-400 mb-3">
-              Most Loved
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
-              Bestsellers
-            </h2>
           </div>
 
           <ProductGrid products={bestsellers} />
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="relative py-32 overflow-hidden">
+      {/* Full-width image banner */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/products/wildflower-garden.jpg"
-            alt="Wildflower bouquet"
+            alt="Custom floral arrangements"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-stone-900/60" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative text-center max-w-2xl mx-auto px-6">
-          <p className="text-xs tracking-[0.3em] uppercase text-rose-300 mb-4">
-            Custom Orders Welcome
+        <div className="relative text-center max-w-xl mx-auto px-6">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-white/60 mb-5">
+            Bespoke Florals
           </p>
-          <h2 className="text-3xl md:text-5xl font-light text-white tracking-tight leading-tight">
-            Let Us Create Something
+          <h2 className="text-3xl md:text-4xl font-light text-white tracking-tight leading-snug">
+            Custom Arrangements
             <br />
-            <span className="italic">Special for You</span>
+            for Every Occasion
           </h2>
-          <p className="mt-6 text-stone-300 font-light">
-            From intimate gatherings to grand celebrations, we craft bespoke
-            arrangements tailored to your vision.
-          </p>
           <Link
             href="/about"
-            className="inline-block mt-10 px-10 py-3.5 bg-white text-stone-800 text-xs tracking-[0.2em] uppercase hover:bg-rose-50 transition-colors"
+            className="inline-block mt-8 px-8 py-3 bg-white text-neutral-900 text-[11px] tracking-[0.2em] uppercase hover:bg-neutral-100 transition-colors duration-200"
           >
             Get in Touch
           </Link>

@@ -17,10 +17,10 @@ export default function AddToCartButton({ product }: { product: Product }) {
   return (
     <button
       onClick={handleAdd}
-      className={`w-full md:w-auto px-12 py-4 text-xs tracking-[0.2em] uppercase transition-all duration-300 ${
+      className={`w-full py-4 text-[11px] tracking-[0.2em] uppercase transition-all duration-300 ${
         added
-          ? "bg-green-700 text-white"
-          : "bg-stone-800 text-white hover:bg-stone-700"
+          ? "bg-neutral-700 text-white"
+          : "bg-neutral-900 text-white hover:bg-neutral-800"
       }`}
     >
       {added ? "Added to Cart" : "Add to Cart"}

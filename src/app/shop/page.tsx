@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { products, categories, getProductsByCategory } from "@/data/products";
+import { categories, getProductsByCategory } from "@/data/products";
 import ProductGrid from "@/components/ProductGrid";
 
 export default function ShopPage() {
@@ -26,26 +26,30 @@ export default function ShopPage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-      <div className="text-center mb-12">
-        <p className="text-xs tracking-[0.3em] uppercase text-rose-400 mb-3">
-          Our Collection
-        </p>
-        <h1 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
-          Shop All Arrangements
+    <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-28 pb-10 lg:pt-32 lg:pb-14">
+      {/* Page header */}
+      <div className="mb-10">
+        <h1 className="text-2xl md:text-3xl font-light text-neutral-800 tracking-tight">
+          {activeCategory === "all"
+            ? "All Arrangements"
+            : categories.find((c) => c.slug === activeCategory)?.name || "Shop"}
         </h1>
+        <p className="text-[12px] text-neutral-400 mt-2">
+          {filtered.length} {filtered.length === 1 ? "item" : "items"}
+        </p>
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
-        <div className="flex flex-wrap gap-2">
+      {/* Filter bar */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-10 pb-6 border-b border-neutral-100">
+        <div className="flex flex-wrap gap-1.5">
           {categories.map((cat) => (
             <button
               key={cat.slug}
               onClick={() => setActiveCategory(cat.slug)}
-              className={`px-4 py-2 text-xs tracking-[0.1em] uppercase transition-all duration-200 ${
+              className={`px-4 py-2 text-[11px] tracking-[0.1em] uppercase transition-all duration-200 ${
                 activeCategory === cat.slug
-                  ? "bg-stone-800 text-white"
-                  : "border border-stone-300 text-stone-500 hover:border-stone-500 hover:text-stone-700"
+                  ? "bg-neutral-900 text-white"
+                  : "text-neutral-400 hover:text-neutral-700"
               }`}
             >
               {cat.name}
@@ -53,27 +57,19 @@ export default function ShopPage() {
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-stone-400 tracking-wide uppercase">
-            Sort by
-          </span>
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="text-sm text-stone-600 border border-stone-300 px-3 py-2 bg-white focus:outline-none focus:border-stone-500"
-          >
-            <option value="default">Default</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="name">Name</option>
-          </select>
-        </div>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="text-[12px] text-neutral-500 border border-neutral-200 px-4 py-2.5 bg-white focus:outline-none focus:border-neutral-400 appearance-none cursor-pointer"
+        >
+          <option value="default">Sort by: Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
       </div>
 
-      <p className="text-sm text-stone-400 mb-8">
-        {filtered.length} {filtered.length === 1 ? "arrangement" : "arrangements"}
-      </p>
-
+      {/* Product grid */}
       <ProductGrid products={filtered} />
     </div>
   );
